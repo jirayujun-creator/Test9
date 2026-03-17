@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPU Movie</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* สไตล์เพิ่มเติมสำหรับ Banner */
+        .hero-banner {
+            background-image: url('https://images.unsplash.com/photo-1440404653325-ab127d49abc1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand text-danger fw-bold" href="#">SPU <span class="text-primary">SIT</span></a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">ภาพยนตร์</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">ล้วงลับเวทีลวง</a></li>
+                            <li><a class="dropdown-item" href="#">เซลล์ขยันพันธุ์เดือด</a></li>
+                            <li><a class="dropdown-item" href="#">Gundam Seed Freedom Special Edition</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">เกี่ยวกับเรา</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">ติดต่อเรา</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-banner">
+        <h1 class="fw-bold display-4">สัมผัสโลกของภาพยนตร์สุดมันส์</h1>
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">ภาพยนตร์แนะนำ</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="MV5BODU3MWNhZDItODdmNy00NzM3LTk3YzctMThiOTY2ZTgzZDg2XkEyXkFqcGc@._V1_.jpg" class="card-img-top" alt="ล้วงลับเวทีลวง">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">ultra galaxy fight new generation heroes</h5>
+                        <p class="card-text text-muted">"ศึกตัดสินระหว่าง 'นิวเจเนอเรชันฮีโร่' และ 'ลีกแห่งความมืด' กำลังจะเริ่มต้นขึ้น!"</p>
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modalMovie1">ดูรายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="MV5BYTI2NjVmNjQtYTlkMC00ZjNjLWJiZjItMTQxYzQyNTNlZmRhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="card-img-top" alt="เซลล์ขยันพันธุ์เดือด">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">ultra galaxy fight the absolute conspiracy</h5>
+                        <p class="card-text text-muted">"การต่อสู้สุดมันส์ในอวกาศของเหล่านิวเจเนอเรชั่นฮีโร่... แผนร้ายสมคบคิดกำลังดำเนินไป เป้าหมายของยักษ์สีทองที่แอบดำเนินอยู่เบื้องหลังคืออะไร?!"</p>
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modalMovie2">ดูรายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="MV5BNDE0MDhmYjgtZTVhNS00YzRlLWE1ZjItNWE5ODQ2ZDdlMjI4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="card-img-top" alt="Gundam">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">ultra galaxy fight the destined crossroad</h5>
+                        <p class="card-text text-muted">"ศึกตัดสินระหว่างนักรบอุลตร้า vs แอบโซลูเทียน"</p>
+                        <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modalMovie3">ดูรายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <div class="modal fade" id="modalMovie1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold" id="modalLabel1">ล้วงลับเวทีลวง</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-5 mb-3 mb-md-0">
+                        <img src="ee12c09a7adffe9c1c49ecbb0d9fd7f48c597514c27ebd1785756f1e81ffa75f.jpg" class="img-fluid rounded shadow-sm" alt="ล้วงลับเวทีลวง">
+                    </div>
+                    <div class="col-md-7">
+                        <p><strong>ผู้กำกับ:</strong> โคอิจิ ซากาโมโตะ (Koichi Sakamoto) </p>
+                        <p><strong>นักแสดงนำ:</strong> Takuya Negishi (Ginga), Kiyotaka Uji (Victory), Kensuke Takahashi (X), Hideo Ishiguro (Orb), Tatsuomi Hamada (Geed), Yuya Hirata (Rosso), Ryosuke Koike (Blu) และ Arisa Sonohara (Grigio)</p>
+                        <p><strong>เนื้อเรื่องย่อ:</strong> เป็นการรวมตัวของเหล่านักรบอุลตร้า “New Generation” เพื่อเผชิญหน้ากับศัตรูใหม่และภัยคุกคามที่วางแผนอยู่เบื้องหลัง</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิดหน้าต่าง</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalMovie2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold" id="modalLabel2">เซลล์ขยันพันธุ์เดือด</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-5 mb-3 mb-md-0">
+                        <img src="Ultra-Galaxy-Fight-The-Absolute-Conspiracy-Featured.webp" class="img-fluid rounded shadow-sm" alt="เซลล์ขยันพันธุ์เดือด">
+                    </div>
+                    <div class="col-md-7">
+                        <p><strong>ผู้กำกับ:</strong> ซากาโมโต้ โคอิจิ (Koichi Sakamoto) </p>
+                        <p><strong>นักแสดงนำ:</strong> อุลตร้าแมนซีโร่ (พากย์โดย มิยาโนะ มาโมรุ), อุลตร้าแมนรีบุท (วาทารุ โคมะดะ), และตัวร้ายหลัก Absolute Tartarus (จุนอิจิ สุวาเบะ)</p>
+                        <p><strong>เนื้อเรื่องย่อ:</strong> เรื่องราวเกี่ยวกับศัตรูใหม่ อับโซลูท ทาร์ทารัส (Absolute Tartarus) นักรบสีทองจากเผ่าพันธุ์อับโซลูเทียนที่มีพลัง ข้ามมิติและเวลา ได้วางแผนแทรกแซงประวัติศาสตร์ของจักรวาลอุลตร้าเพื่อสร้างอาณาจักรใหม่ของตนเอง</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิดหน้าต่าง</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalMovie3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold" id="modalLabel3">Gundam Seed Freedom</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-5 mb-3 mb-md-0">
+                        <img src="629134af1512a3b9b15acb2a_UGFDC-Noob.jpg" class="img-fluid rounded shadow-sm" alt="Gundam">
+                    </div>
+                    <div class="col-md-7">
+                        <p><strong>ผู้กำกับ:</strong> ซากาโมโต้ โคอิจิ (Koichi Sakamoto)</p>
+                        <p><strong>นักแสดงนำ:</strong> Ultraman Regulos: พากย์โดย Shugo Nakamura Ultraman Zero: พากย์โดย Mamoru Miyano Ultraman Ribut: พากย์โดย Wataru Komada Ultraman Z: พากย์โดย Tasuku Hatanaka Absolute Tartarus: พากย์โดย Junichi Suwabe Absolute Diavolo: พากย์โดย Teruaki Ogawa Absolute Titan: พากย์โดย Hiroki Yasumoto</p>
+                        <p><strong>เนื้อเรื่องย่อ:</strong> เกี่ยวกับการเผชิญหน้าครั้งยิ่งใหญ่ระหว่างเหล่านักรบอุลตร้าและชาวแอ็บโซลูเทียน (Absolutians) </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิดหน้าต่าง</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container mt-5 mb-5" id="about">
+        <h2 class="text-center mb-4">เกี่ยวกับเรา</h2>
+        <div class="p-4 bg-light rounded shadow-sm text-center">
+            <p>ยินดีต้อนรับสู่ <strong>SPU Movie</strong> เว็บไซต์ศูนย์รวมภาพยนตร์ที่อัปเดตใหม่ล่าสุด<br>
+            เรามุ่งมั่นที่จะนำเสนอประสบการณ์การรับชมภาพยนตร์และข่าวสารที่ครบถ้วนที่สุดสำหรับคอหนังทุกคน!</p>
+        </div>
+    </div>
+
+    <div class="container mb-5" id="contact">
+        <h2 class="text-center mb-4">ติดต่อเรา</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <form>
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">ชื่อ-นามสกุล</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="กรอกชื่อ-นามสกุล">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">อีเมล</label>
+                                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">ข้อความ</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="กรอกข้อความที่ต้องการติดต่อ..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">ส่งข้อมูล</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <div class="mb-3">
+                <a href="https://www.facebook.com" target="_blank" class="text-white me-3 fs-4"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com" target="_blank" class="text-white me-3 fs-4"><i class="fab fa-instagram"></i></a>
+                <a href="https://line.me/th/" target="_blank" class="text-white fs-4"><i class="fab fa-line"></i></a>
+            </div>
+            <p class="mb-0">&copy; 2026 Movie By [นาย จิรายุ จันทะนนท์ 68088939]</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
